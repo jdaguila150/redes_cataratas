@@ -1,0 +1,14 @@
+{
+  "backbone": "mobilenet_v3_small",
+  "fold": 5,
+  "generated_files": [
+    "C:\\Users\\Usuario_X\\Desktop\\Josue\\Redes Neuronales\\final_redes\\artifacts\\gradcam\\cataract_1_image_253.png",
+    "C:\\Users\\Usuario_X\\Desktop\\Josue\\Redes Neuronales\\final_redes\\artifacts\\gradcam\\cataract_2_image_254.png",
+    "C:\\Users\\Usuario_X\\Desktop\\Josue\\Redes Neuronales\\final_redes\\artifacts\\gradcam\\cataract_3_image_260.png",
+    "C:\\Users\\Usuario_X\\Desktop\\Josue\\Redes Neuronales\\final_redes\\artifacts\\gradcam\\cataract_4_image_261.png",
+    "C:\\Users\\Usuario_X\\Desktop\\Josue\\Redes Neuronales\\final_redes\\artifacts\\gradcam\\normal_1_image_246.png",
+    "C:\\Users\\Usuario_X\\Desktop\\Josue\\Redes Neuronales\\final_redes\\artifacts\\gradcam\\normal_2_image_252.png",
+    "C:\\Users\\Usuario_X\\Desktop\\Josue\\Redes Neuronales\\final_redes\\artifacts\\gradcam\\normal_3_image_257.png",
+    "C:\\Users\\Usuario_X\\Desktop\\Josue\\Redes Neuronales\\final_redes\\artifacts\\gradcam\\normal_4_image_258.png"
+  ]
+}

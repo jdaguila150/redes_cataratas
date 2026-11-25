@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Dataset (download from Kaggle: nandanp6/cataract-image-dataset)
+processed_images/
+
+# Heavy PyTorch fold checkpoints
+artifacts/checkpoints/
+
+# Android Studio / Gradle
+android_app/.gradle/
+android_app/build/
+android_app/app/build/
+android_app/local.properties
+android_app/.idea/

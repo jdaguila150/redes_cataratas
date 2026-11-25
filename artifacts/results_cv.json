@@ -1,0 +1,211 @@
+{
+  "device": "cpu",
+  "train_summary": {
+    "split_dir": "C:\\Users\\Usuario_X\\Desktop\\Josue\\Redes Neuronales\\final_redes\\processed_images\\train",
+    "total_valid": 373,
+    "normal_count": 225,
+    "cataract_count": 148,
+    "corrupt_removed": 0,
+    "exact_duplicates_removed": 118
+  },
+  "test_summary": {
+    "split_dir": "C:\\Users\\Usuario_X\\Desktop\\Josue\\Redes Neuronales\\final_redes\\processed_images\\test",
+    "total_valid": 111,
+    "normal_count": 60,
+    "cataract_count": 51,
+    "corrupt_removed": 0,
+    "exact_duplicates_removed": 10,
+    "leakage_removed_against_train": 59,
+    "final_test_count": 52
+  },
+  "models": {
+    "efficientnet_b0": {
+      "params": 4008829,
+      "elapsed_seconds": 4864.99,
+      "folds": [
+        {
+          "sensitivity": 0.9666666666666667,
+          "specificity": 0.8888888888888888,
+          "precision": 0.8529411764705882,
+          "f2": 0.9415584415584416,
+          "auc_roc": 0.9925925925925926,
+          "tp": 29,
+          "tn": 40,
+          "fp": 5,
+          "fn": 1
+        },
+        {
+          "sensitivity": 0.896551724137931,
+          "specificity": 0.9777777777777777,
+          "precision": 0.9629629629629629,
+          "f2": 0.9090909090909091,
+          "auc_roc": 0.978544061302682,
+          "tp": 26,
+          "tn": 44,
+          "fp": 1,
+          "fn": 3
+        },
+        {
+          "sensitivity": 0.9310344827586207,
+          "specificity": 0.9777777777777777,
+          "precision": 0.9642857142857143,
+          "f2": 0.9375,
+          "auc_roc": 0.9770114942528736,
+          "tp": 27,
+          "tn": 44,
+          "fp": 1,
+          "fn": 2
+        },
+        {
+          "sensitivity": 0.9333333333333333,
+          "specificity": 0.9555555555555556,
+          "precision": 0.9333333333333333,
+          "f2": 0.9333333333333333,
+          "auc_roc": 0.9703703703703703,
+          "tp": 28,
+          "tn": 43,
+          "fp": 2,
+          "fn": 2
+        },
+        {
+          "sensitivity": 1.0,
+          "specificity": 0.9777777777777777,
+          "precision": 0.967741935483871,
+          "f2": 0.9933774834437086,
+          "auc_roc": 1.0,
+          "tp": 30,
+          "tn": 44,
+          "fp": 1,
+          "fn": 0
+        }
+      ],
+      "cv_summary": {
+        "sensitivity": {
+          "mean": 0.9455172413793104,
+          "std": 0.035132574537484716
+        },
+        "specificity": {
+          "mean": 0.9555555555555555,
+          "std": 0.034426518632954824
+        },
+        "precision": {
+          "mean": 0.936253024507294,
+          "std": 0.043451565317838725
+        },
+        "f2": {
+          "mean": 0.9429720334852785,
+          "std": 0.02761697271229151
+        },
+        "auc_roc": {
+          "mean": 0.9837037037037037,
+          "std": 0.010897403117015285
+        }
+      },
+      "test_ensemble_metrics": {
+        "sensitivity": 0.8125,
+        "specificity": 0.9722222222222222,
+        "precision": 0.9285714285714286,
+        "f2": 0.8333333333333334,
+        "auc_roc": 0.984375,
+        "tp": 13,
+        "tn": 35,
+        "fp": 1,
+        "fn": 3
+      }
+    },
+    "mobilenet_v3_small": {
+      "params": 927585,
+      "elapsed_seconds": 827.7,
+      "folds": [
+        {
+          "sensitivity": 0.9,
+          "specificity": 1.0,
+          "precision": 1.0,
+          "f2": 0.9183673469387755,
+          "auc_roc": 0.994074074074074,
+          "tp": 27,
+          "tn": 45,
+          "fp": 0,
+          "fn": 3
+        },
+        {
+          "sensitivity": 0.896551724137931,
+          "specificity": 0.9333333333333333,
+          "precision": 0.896551724137931,
+          "f2": 0.896551724137931,
+          "auc_roc": 0.9770114942528736,
+          "tp": 26,
+          "tn": 42,
+          "fp": 3,
+          "fn": 3
+        },
+        {
+          "sensitivity": 0.9310344827586207,
+          "specificity": 0.9555555555555556,
+          "precision": 0.9310344827586207,
+          "f2": 0.9310344827586207,
+          "auc_roc": 0.982375478927203,
+          "tp": 27,
+          "tn": 43,
+          "fp": 2,
+          "fn": 2
+        },
+        {
+          "sensitivity": 0.9333333333333333,
+          "specificity": 0.9111111111111111,
+          "precision": 0.875,
+          "f2": 0.9210526315789473,
+          "auc_roc": 0.9755555555555555,
+          "tp": 28,
+          "tn": 41,
+          "fp": 4,
+          "fn": 2
+        },
+        {
+          "sensitivity": 0.9333333333333333,
+          "specificity": 0.9777777777777777,
+          "precision": 0.9655172413793104,
+          "f2": 0.9395973154362416,
+          "auc_roc": 0.9933333333333334,
+          "tp": 28,
+          "tn": 44,
+          "fp": 1,
+          "fn": 2
+        }
+      ],
+      "cv_summary": {
+        "sensitivity": {
+          "mean": 0.9188505747126436,
+          "std": 0.016855450832021474
+        },
+        "specificity": {
+          "mean": 0.9555555555555555,
+          "std": 0.03142696805273544
+        },
+        "precision": {
+          "mean": 0.9336206896551724,
+          "std": 0.04525656809795409
+        },
+        "f2": {
+          "mean": 0.9213207001701033,
+          "std": 0.01449612753478876
+        },
+        "auc_roc": {
+          "mean": 0.9844699872286078,
+          "std": 0.007877570219993718
+        }
+      },
+      "test_ensemble_metrics": {
+        "sensitivity": 0.875,
+        "specificity": 0.9444444444444444,
+        "precision": 0.875,
+        "f2": 0.875,
+        "auc_roc": 0.9878472222222222,
+        "tp": 14,
+        "tn": 34,
+        "fp": 2,
+        "fn": 2
+      }
+    }
+  }
+}

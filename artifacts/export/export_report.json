@@ -1,0 +1,36 @@
+{
+  "backbone": "mobilenet_v3_small",
+  "fold": 5,
+  "fp32_model": "C:\\Users\\Usuario_X\\Desktop\\Josue\\Redes Neuronales\\final_redes\\artifacts\\export\\cataract_mobilenet_v3_small_fp32.onnx",
+  "int8_model": "C:\\Users\\Usuario_X\\Desktop\\Josue\\Redes Neuronales\\final_redes\\artifacts\\export\\cataract_mobilenet_v3_small_int8.onnx",
+  "fp32_size_mb": 3.547,
+  "int8_size_mb": 1.198,
+  "meets_size_target_lt_5mb": true,
+  "meets_latency_target_lt_250ms": true,
+  "fp32_test_metrics": {
+    "sensitivity": 0.75,
+    "specificity": 0.9444444444444444,
+    "precision": 0.8571428571428571,
+    "f2": 0.7692307692307693,
+    "auc_roc": 0.9826388888888888,
+    "tp": 12,
+    "tn": 34,
+    "fp": 2,
+    "fn": 4,
+    "mean_latency_ms": 12.777,
+    "p95_latency_ms": 21.438
+  },
+  "int8_test_metrics": {
+    "sensitivity": 0.0,
+    "specificity": 1.0,
+    "precision": 0.0,
+    "f2": 0.0,
+    "auc_roc": 0.4149305555555555,
+    "tp": 0,
+    "tn": 36,
+    "fp": 0,
+    "fn": 16,
+    "mean_latency_ms": 16.22,
+    "p95_latency_ms": 34.715
+  }
+}
