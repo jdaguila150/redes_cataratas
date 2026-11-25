@@ -87,3 +87,27 @@ def test_gradcam_and_exported_onnx() -> None:
     assert logit.shape == (1,)
     assert conv_feat.shape == (1, 576, 7, 7)
     assert np.isfinite(logit).all() and np.isfinite(conv_feat).all()
+
+
+def test_web_app_predict_endpoint() -> None:
+    import base64
+    import cv2
+    from fastapi.testclient import TestClient
+    from src.web.app import app
+
+    client = TestClient(app)
+    resp_home = client.get("/")
+    assert resp_home.status_code == 200
+
+    synthetic_bgr = np.full((128, 128, 3), 120, dtype=np.uint8)
+    ok, buf = cv2.imencode(".png", synthetic_bgr)
+    assert ok
+    b64 = "data:image/png;base64," + base64.b64encode(buf.tobytes()).decode("ascii")
+
+    resp = client.post("/predict", json={"image_base64": b64})
+    assert resp.status_code == 200
+    body = resp.json()
+    assert body["prediction"] in {"NORMAL", "CATARACT"}
+    assert 0.0 <= body["probability"] <= 1.0
+    assert body["preprocessed_b64"].startswith("data:image/png;base64,")
+    assert body["gradcam_overlay_b64"].startswith("data:image/png;base64,")

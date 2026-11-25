@@ -14,7 +14,8 @@ Herramienta de **triaje médico offline** basada en Redes Neuronales Convolucion
 │   ├── evaluation/metrics.py  # Sensibilidad, Especificidad, Precisión (VPP), F2, AUC-ROC
 │   ├── training/train_cv.py   # Validación cruzada estratificada por grupo (5-Fold)
 │   ├── xai/gradcam.py         # Mapas de calor Grad-CAM + superposición (overlay)
-│   └── export/export_onnx.py  # Exportación ONNX, cuantización INT8 y benchmark de latencia
+│   ├── export/export_onnx.py  # Exportación ONNX, cuantización INT8 y benchmark de latencia
+│   └── web/app.py             # Servicio web FastAPI (ONNX + Grad-CAM) para PC y navegador móvil
 ├── android_app/               # Prototipo Android (Kotlin + ONNX Runtime Mobile + Grad-CAM)
 ├── artifacts/                 # Checkpoints, results_cv.json, gradcam/ y modelos ONNX
 └── tests/test_pipeline.py     # Pruebas unitarias (preprocesamiento, CNN, Grad-CAM, ONNX)
@@ -51,6 +52,13 @@ python -m src.training.train_cv --epochs 8
 python -m src.xai.gradcam
 python -m src.export.export_onnx
 ```
+
+### Servicio Web (Prueba rápida en PC y Android sin Android Studio)
+```bash
+python -m uvicorn src.web.app:app --host 0.0.0.0 --port 8000
+```
+- **En PC:** abre `http://localhost:8000`.
+- **En Android (misma red Wi-Fi):** abre `http://<IP_LOCAL_DE_TU_PC>:8000` desde Chrome; permite subir una fotografía o usar la cámara del teléfono y muestra el resultado de triaje junto con el mapa Grad-CAM.
 
 ### Android Studio
 1. Abre la carpeta `android_app/` en **Android Studio** (Gradle Sync descargará `onnxruntime-android:1.20.0`).
